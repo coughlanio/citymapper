@@ -2,6 +2,8 @@
 
 Client library for interacting with the Citymapper Developer API.
 
+[![CircleCI](https://circleci.com/gh/coughlanio/citymapper.svg?style=svg)](https://circleci.com/gh/coughlanio/citymapper)
+
 ## Installation
 
 ```
