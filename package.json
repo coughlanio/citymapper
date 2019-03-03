@@ -5,13 +5,15 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha tests"
+    "test": "nyc mocha tests",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov",
+    "upload": "codecov"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/coughlanio/citymapper"
   },
-  "author": "Chris Coughlan <chris@coughlan.io>", 
+  "author": "Chris Coughlan <chris@coughlan.io>",
   "license": "MIT",
   "dependencies": {
     "ajv": "^6.10.0",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "codecov": "^3.2.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-chai-friendly": "^0.4.1",
@@ -28,6 +31,7 @@
     "eslint-plugin-react": "^7.12.4",
     "json-schema-faker": "^0.5.0-rc16",
     "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
     "sinon": "^7.2.6"
   }
 }
