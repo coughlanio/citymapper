@@ -1,14 +1,14 @@
 const sinon = require('sinon');
-const CityMapper = require('../src');
+const Citymapper = require('../src');
 const resources = require('../src/resources');
 
 const sandbox = sinon.createSandbox();
 
 describe('CityMapper API Resources', () => {
   beforeEach(() => {
-    sandbox.stub(CityMapper.prototype, 'post').resolves({});
-    sandbox.stub(CityMapper.prototype, 'get').resolves({});
-    this.citymapper = new CityMapper('foo');
+    sandbox.stub(Citymapper.prototype, 'post').resolves({});
+    sandbox.stub(Citymapper.prototype, 'get').resolves({});
+    this.citymapper = new Citymapper('foo');
   });
 
   afterEach(() => {

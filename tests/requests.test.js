@@ -1,7 +1,7 @@
 const jsf = require('json-schema-faker');
 const request = require('request-promise-native');
 const sinon = require('sinon');
-const CityMapper = require('../src');
+const Citymapper = require('../src');
 const resources = require('../src/resources');
 
 const sandbox = sinon.createSandbox();
@@ -10,7 +10,7 @@ describe('CityMapper API Requests', () => {
   beforeEach(() => {
     sandbox.stub(request, 'post').resolves({});
     sandbox.stub(request, 'get').resolves({});
-    this.citymapper = new CityMapper('foo');
+    this.citymapper = new Citymapper('foo');
   });
 
   afterEach(() => {

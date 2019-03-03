@@ -2,7 +2,7 @@ const Ajv = require('ajv');
 const request = require('request-promise-native');
 const resources = require('./resources');
 
-module.exports = class CityMapper {
+module.exports = class Citymapper {
   constructor(token) {
     this.api = 'https://developer.citymapper.com';
     this.key = token;
@@ -14,7 +14,7 @@ module.exports = class CityMapper {
       method,
       schema,
     }) => {
-      CityMapper.prototype[name] = this[method].bind(this, path, schema);
+      Citymapper.prototype[name] = this[method].bind(this, path, schema);
     });
   }
 
