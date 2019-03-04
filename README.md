@@ -18,11 +18,11 @@ npm install citymapper
 
 ```
 const assert = require('assert');
-const CityMapper = require('../src');
+const Citymapper = require('citymapper');
 
 const API_KEY = process.env.CITYMAPPER_API_KEY;
 
-const citymapper = new CityMapper(API_KEY);
+const citymapper = new Citymapper(API_KEY);
 
 const params = {
   points: [
